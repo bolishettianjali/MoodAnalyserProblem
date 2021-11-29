@@ -3,11 +3,13 @@ package com.moodAnalyser;
 public class MoodAnalyser {
 
     /**
-     * This method returns SAD if the message contains sad
+     * This method returns SAD if the message contains sad else HAPPY
      * @param message
      * @return
      */
     public String analyseMood(String message) {
-        return "SAD";
+        if (message.contains("sad"))
+            return "SAD";
+        return "HAPPY";
     }
 }
