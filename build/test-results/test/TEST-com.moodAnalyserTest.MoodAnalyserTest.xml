@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.moodAnalyserTest.MoodAnalyserTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-11-29T16:58:46" hostname="DESKTOP-DE643GH" time="0.044">
+<testsuite name="com.moodAnalyserTest.MoodAnalyserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-11-29T17:12:39" hostname="DESKTOP-DE643GH" time="0.061">
   <properties/>
-  <testcase name="testAnalyseMoodForSadUsingParamConst()" classname="com.moodAnalyserTest.MoodAnalyserTest" time="0.03"/>
+  <testcase name="testAnalyseMoodForSadUsingParamConst()" classname="com.moodAnalyserTest.MoodAnalyserTest" time="0.039"/>
+  <testcase name="testAnalyseMoodForNull()" classname="com.moodAnalyserTest.MoodAnalyserTest" time="0.003"/>
   <testcase name="testAnalyseMoodForSad()" classname="com.moodAnalyserTest.MoodAnalyserTest" time="0.003"/>
-  <testcase name="testAnalyseMoodForAnyMoodUsingParamConst()" classname="com.moodAnalyserTest.MoodAnalyserTest" time="0.004"/>
+  <testcase name="testAnalyseMoodForAnyMoodUsingParamConst()" classname="com.moodAnalyserTest.MoodAnalyserTest" time="0.002"/>
   <testcase name="testAnalyseMoodForAnyMood()" classname="com.moodAnalyserTest.MoodAnalyserTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
