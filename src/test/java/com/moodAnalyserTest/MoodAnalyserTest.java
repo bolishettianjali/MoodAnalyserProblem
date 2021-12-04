@@ -28,11 +28,11 @@ public class MoodAnalyserTest {
     @Test
     public void testAnalyseMoodForSadUsingParamConst() throws MoodAnalyserException {
 
-        MoodAnalyser mood = new MoodAnalyser(null);
+        MoodAnalyser mood = new MoodAnalyser("");
         try {
             mood.analyseMood();
         } catch (MoodAnalyserException e) {
-            Assertions.assertEquals("Empty Mood", e.getMessage());
+            Assertions.assertEquals("EMPTY MOOD", e.getMessage());
         }
     }
 }
