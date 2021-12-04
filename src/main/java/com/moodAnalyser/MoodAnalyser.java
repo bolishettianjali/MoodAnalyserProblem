@@ -6,7 +6,8 @@ public class MoodAnalyser {
 
     String message;
 
-    public MoodAnalyser() { }
+    public MoodAnalyser() {
+    }
 
     public MoodAnalyser(String message) {
         this.message = message;
@@ -14,6 +15,7 @@ public class MoodAnalyser {
 
     /**
      * This method takes message as parameters and returns SAD if the message contains sad else HAPPY
+     *
      * @param message
      * @return
      */
@@ -25,6 +27,7 @@ public class MoodAnalyser {
 
     /**
      * This method returns SAD if the message contains sad else HAPPY
+     *
      * @return
      */
     public String analyseMood() throws MoodAnalyserException {
@@ -34,7 +37,11 @@ public class MoodAnalyser {
             else
                 return "HAPPY";
         } catch (NullPointerException e) {
-            throw new MoodAnalyserException("Empty Mood");
+            if (this.message == null) {
+                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.NULL + "MOOD");
+            } else {
+                throw new MoodAnalyserException(MoodAnalyserException.ExceptionType.EMPTY + "MOOD");
+            }
         }
     }
 }

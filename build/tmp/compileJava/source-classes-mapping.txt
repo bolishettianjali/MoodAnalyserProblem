@@ -1,4 +1,5 @@
-com/Exception/MoodAnalyserException.java
- com.Exception.MoodAnalyserException
 com/moodAnalyser/MoodAnalyser.java
  com.moodAnalyser.MoodAnalyser
+com/Exception/MoodAnalyserException.java
+ com.Exception.MoodAnalyserException
+ com.Exception.MoodAnalyserException$ExceptionType
