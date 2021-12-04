@@ -1,5 +1,7 @@
 package com.moodAnalyser;
 
+import com.Exception.MoodAnalyserException;
+
 public class MoodAnalyser {
 
     String message;
@@ -25,14 +27,14 @@ public class MoodAnalyser {
      * This method returns SAD if the message contains sad else HAPPY
      * @return
      */
-    public String analyseMood() {
+    public String analyseMood() throws MoodAnalyserException {
         try {
             if (this.message.contains("sad"))
                 return "SAD";
             else
                 return "HAPPY";
         } catch (NullPointerException e) {
-            return "HAPPY";
+            throw new MoodAnalyserException("Empty Mood");
         }
     }
 }

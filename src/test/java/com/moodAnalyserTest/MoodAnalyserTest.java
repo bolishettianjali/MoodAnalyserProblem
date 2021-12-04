@@ -1,9 +1,13 @@
 package com.moodAnalyserTest;
 
+import com.Exception.MoodAnalyserException;
 import com.moodAnalyser.MoodAnalyser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
+
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MoodAnalyserTest {
 
@@ -22,23 +26,13 @@ public class MoodAnalyserTest {
     }
 
     @Test
-    public void testAnalyseMoodForSadUsingParamConst() {
-        MoodAnalyser mood = new MoodAnalyser("I am in sad mood");
-        String result = mood.analyseMood();
-        Assertions.assertEquals("SAD", result);
-    }
+    public void testAnalyseMoodForSadUsingParamConst() throws MoodAnalyserException {
 
-    @Test
-    public void testAnalyseMoodForAnyMoodUsingParamConst() {
-        MoodAnalyser mood = new MoodAnalyser("I am in any mood");
-        String result = mood.analyseMood();
-        Assertions.assertEquals("HAPPY", result);
-    }
-
-    @Test
-    public void testAnalyseMoodForNull() {
         MoodAnalyser mood = new MoodAnalyser(null);
-        String result = mood.analyseMood();
-        Assertions.assertEquals("HAPPY", result);
+        try {
+            mood.analyseMood();
+        } catch (MoodAnalyserException e) {
+            Assertions.assertEquals("Empty Mood", e.getMessage());
+        }
     }
 }
